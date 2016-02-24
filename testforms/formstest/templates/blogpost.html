@@ -1,0 +1,10 @@
+{% block head_title %}Create Blog Post{% endblock %} {% block content %} Hello {{ pk }}
+{% csrf_token %} {{ form.as_p }}  Save
+<input type="submit" value="Save">
+{% for item in my_post%}
+
+{{ item.name }}
+Footer
+{{ item.content|linebreaksbr }}
+
+{% endfor %} {% endblock %}
